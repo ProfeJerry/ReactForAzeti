@@ -62,11 +62,11 @@ function NewsItem(props: NewsItemProps) {
     }, [data]);
 
     return (
-        <div>
+        <div className="ms-depth-4 news-container">
             {newsItem === undefined
                 ? ""
                 :
-                <div className="ms-depth-4 contact-container">
+                <div >
                 <Container fluid className="newsItem">
                     <Row >
                         <Col className="newsText" md={4}>

@@ -39,7 +39,7 @@ function NewsContainer(props:string) {
             <Stack>
             {newsStories === undefined || newsStories.ids.length === 0
                 ? ""
-                : newsStories.ids.map((id) => <NewsItem id={id}> </NewsItem>)
+                : newsStories.ids. slice(0,100).map((id) => <NewsItem id={id}> </NewsItem>)
             }
             </Stack>
         </div>

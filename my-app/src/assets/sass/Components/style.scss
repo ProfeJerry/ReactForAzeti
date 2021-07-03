@@ -6,7 +6,7 @@ form {
 body{
   background-color: #282c34;
 }
-.contact-container {
+.news-container {
   padding: 1em;
   list-style-type: none;
   border-radius: 6px;
@@ -18,7 +18,7 @@ body{
     margin-top: 0;
   }
 
-  .container-fluid > .contact-container {
+  .container-fluid > .news-container {
     background-color: #000;
   }
 }
@@ -75,9 +75,8 @@ body{
 .button{
   padding: 1em;
   float: left;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-left: 1em;
-  margin-bottom: 1em;
 }
 h1 {
   text-align: center;

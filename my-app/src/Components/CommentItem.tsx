@@ -64,7 +64,7 @@ function CommentItem(props: CommentItemProps) {
                 <div>
 
                         <Container fluid className="newsItem">
-                            <Row className="ms-depth-4 contact-container">
+                            <Row className="ms-depth-4 news-container">
                                 <Col className="newsText" md={4}>
                           <span className="newsSource">
                               {commentItem.by} says:
