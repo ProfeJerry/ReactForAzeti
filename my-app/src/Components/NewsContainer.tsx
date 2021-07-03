@@ -17,14 +17,11 @@ function NewsContainer(props:string) {
     const [newsStories, setNewsStories] = useState<NewsStories>();
     const [data, query, setQuery, apiLoading, error, errorMessage] = useData(EndPoint.BestStories, "GET", [])
 
-
     const parseData = () => {
-
         let helper: NewsStories = {
-            ids: data.slice(0,10) ,
+            ids: data ,
         };
         setNewsStories(helper);
-
     }
     useEffect(() => {
         setQuery({"body":""})
@@ -37,13 +34,12 @@ function NewsContainer(props:string) {
     }, [data]);
 
     return (
-        <div>
+        <div className="NewsScroll">
             <h6>News feed</h6>
             <Stack>
-
             {newsStories === undefined || newsStories.ids.length === 0
                 ? ""
-                : newsStories.ids.map((id) => {NewsItem(id)})
+                : newsStories.ids.map((id) => <NewsItem id={id}> </NewsItem>)
             }
             </Stack>
         </div>

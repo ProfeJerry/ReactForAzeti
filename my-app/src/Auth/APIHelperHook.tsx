@@ -36,12 +36,13 @@ function useData(endpoint: string, callType: string, params: any) {
                 delete query.body;
             }
             let response: Response;
-            if (query.body.length === 0){
+            if (query.body !== undefined && query.body.length === 0){
                 response = await fetch(endpoint, {
                     method: callType,
                     headers: headers,
                     body: callType == 'GET' || callType == 'HEAD' ? undefined : JSON.stringify(body),
                 });
+                delete query.body;
             }
             else {
                 response = await fetch(endpoint + '/' + serialize(query) + '.json', {
@@ -56,7 +57,6 @@ function useData(endpoint: string, callType: string, params: any) {
                 setData(result);
                 setErrorMessage("");
                 setError(StatusEnum.Ok);
-
             }
         }
         fetchData().catch((error) => {
