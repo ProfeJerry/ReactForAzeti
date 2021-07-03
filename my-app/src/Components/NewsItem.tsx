@@ -66,9 +66,9 @@ function NewsItem(props: NewsItemProps) {
             {newsItem === undefined
                 ? ""
                 :
-                <div className="contact-container">
+                <div className="ms-depth-4 contact-container">
                 <Container fluid className="newsItem">
-                    <Row className="ms-depth-4 contact-container">
+                    <Row >
                         <Col className="newsText" md={4}>
                           <span className="newsSource">
                               {newsItem.by}

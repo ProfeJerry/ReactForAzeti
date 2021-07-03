@@ -68,7 +68,8 @@ body {
 .button {
   padding: 1em;
   float: left;
-  margin-left: 2.8em;
+  margin-top: 2em;
+  margin-left: 1em;
   margin-bottom: 1em;
 }
 
