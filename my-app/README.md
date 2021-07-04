@@ -44,3 +44,17 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Fluent UI
+
+Some controls used on this project come from Microsoft Fluent UI library it's an open-source design system that provides easy to use controls with a decent look and feel. I chose this for its simplicity. You can learn more about it in [Fluent UI](https://www.microsoft.com/design/fluent/#/)
+
+## Collapse Library
+
+The control used to collapse comments was taken from [Kunukn react collapse](https://github.com/kunukn/react-collapse). It's a real simple and easy to used implementation that was perfect for this small project.
+
+## Hacker News API
+For accessing data from [Hacker News](https://news.ycombinator.com/) the API I used was [this one](https://github.com/HackerNews/API). This presented challenges on the way data is returned. A call to get the top stories returns an array of IDs for each item instead of a JSON containing all the data for the news. This requires additional calls to be made to the API. 
+
+To tackle this problem I used a helper hook that would be responsible for making all the calls to the API. On a separate config file the base URL of the API is stored  along with all the endpoints needed. 

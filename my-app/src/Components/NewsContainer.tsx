@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import {Stack} from "@fluentui/react";
-import {Container, Col, Row} from "react-bootstrap";
 import {EndPoint} from "../Auth/config";
 import useData from "../Auth/APIHelperHook";
 import '../assets/sass/Components/style.scss';
